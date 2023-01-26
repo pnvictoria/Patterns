@@ -5,7 +5,10 @@
   <groupId>org.example</groupId>
   <artifactId>Patterns</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <modules>
+    <module>adapter</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>Patterns</name>
   <url>http://maven.apache.org</url>
