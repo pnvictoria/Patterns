@@ -1,45 +1,28 @@
 package org.example.models;
 
 import org.example.models.observer.Observers;
+import org.example.models.strategy.PostStrategy;
 
-public class Employee implements Observers {
-    private String name;
-    private String surname;
+public class Employee extends Human implements PostStrategy, Observers {
+    private final String POSITION = "Worker";
 
     public Employee () {
+        super();
     }
 
     public Employee (String name, String surname) {
-        this.name = name;
-        this.surname = surname;
+        super(name,surname);
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public void notifies() {
-        System.out.println(name + " " + surname + " aware of the changes.");
+    @Override
+    public boolean isPossibleNewPosition() {
+        return true;
     }
 
     @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+    public void collectPositionDetails() {
+        System.out.println("Current position: " + POSITION);
     }
 }
 

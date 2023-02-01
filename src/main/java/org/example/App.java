@@ -40,7 +40,8 @@ public class App {
             System.out.println(" 2. Show department list;");
             System.out.println(" 3. Print employees list;");
             System.out.println(" 4. Information about management;");
-            System.out.println(" 5. Check observer;");
+            System.out.println(" 5. Check strategy;");
+            System.out.println(" 6. Check observer;");
             System.out.println(" 0. Exit;");
             System.out.print("Answer: ");
 
@@ -68,6 +69,15 @@ public class App {
                     }
                     continue oper;
                 case 5:
+                    employeeDirector.collectPositionDetails();
+                    for (Department department:departments) {
+                        department.getEmployeeManager().collectPositionDetails();
+                        for (Employee employee:department.getEmployees()) {
+                            employee.collectPositionDetails();
+                        }
+                    }
+                    continue oper;
+                case 6:
                     project.setName("Lab5 Main project");
                     System.out.println("Project name changed from Main project to Lab5 Main project.\n");
                     project.notifiesObserver();
