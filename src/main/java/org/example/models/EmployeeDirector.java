@@ -1,15 +1,17 @@
 package org.example.models;
 
 public class EmployeeDirector extends Employee {
-    public EmployeeDirector(String name, String surname) {
-        super(name,surname);
+
+    private static EmployeeDirector INSTANCE;
+
+    private EmployeeDirector() {
+        super();
     }
 
-    @Override
-    public String toString() {
-        return "EmployeeDirector{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+    public static EmployeeDirector getInstance() {
+        if(INSTANCE == null) {
+            INSTANCE = new EmployeeDirector();
+        }
+        return INSTANCE;
     }
 }

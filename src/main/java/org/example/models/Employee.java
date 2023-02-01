@@ -1,13 +1,15 @@
 package org.example.models;
 
-public class Employee {
-    public String name;
-    public String surname;
+import org.example.models.observer.Observers;
 
-    public Employee() {
+public class Employee implements Observers {
+    private String name;
+    private String surname;
+
+    public Employee () {
     }
 
-    public Employee(String name, String surname) {
+    public Employee (String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
@@ -28,6 +30,10 @@ public class Employee {
         this.surname = surname;
     }
 
+    public void notifies() {
+        System.out.println(name + " " + surname + " aware of the changes.");
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -36,3 +42,4 @@ public class Employee {
                 '}';
     }
 }
+

@@ -1,10 +1,15 @@
 package org.example.models;
 
+import org.example.models.observer.Observers;
+import org.example.models.observer.ProjectObserver;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class Project {
+public class Project implements ProjectObserver {
     public List<Task> tasks;
     public String name;
+    private List<Observers> list = new ArrayList<>();
 
     public Project(List<Task> tasks) {
         this.tasks = tasks;
@@ -30,4 +35,19 @@ public class Project {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void addObserver(Observers observers) {
+        list.add(observers);
+    }
+
+    public void removeObserver(Observers observers) {
+        list.remove(observers);
+    }
+
+    public void notifiesObserver() {
+        for (Observers observers : list) {
+            observers.notifies();
+        }
+    }
+
 }
