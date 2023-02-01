@@ -68,7 +68,9 @@ public class App {
                     }
                     continue oper;
                 case 4:
-
+                    for (Department department:departments) {
+                        System.out.println(department.getEmployeeManager());
+                    }
                     continue oper;
                 case 0:
 
