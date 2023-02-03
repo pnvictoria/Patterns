@@ -1,4 +1,4 @@
-package org.example.models;
+package org.example.entety;
 
 import java.util.List;
 

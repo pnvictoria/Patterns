@@ -1,7 +1,7 @@
-package org.example.models;
+package org.example.entety;
 
-import org.example.models.observer.Observers;
-import org.example.models.strategy.PostStrategy;
+import org.example.patterns.observer.Observers;
+import org.example.patterns.strategy.PostStrategy;
 
 public class Employee extends Human implements PostStrategy, Observers {
     private final String POSITION = "Worker";

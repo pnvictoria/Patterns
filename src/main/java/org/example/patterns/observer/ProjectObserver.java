@@ -1,4 +1,4 @@
-package org.example.models.observer;
+package org.example.patterns.observer;
 
 public interface ProjectObserver {
     void addObserver(Observers observers);

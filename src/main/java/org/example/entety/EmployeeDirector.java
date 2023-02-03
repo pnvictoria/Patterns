@@ -1,6 +1,6 @@
-package org.example.models;
+package org.example.entety;
 
-import org.example.models.strategy.PostStrategy;
+import org.example.patterns.strategy.PostStrategy;
 
 public class EmployeeDirector extends Employee implements PostStrategy {
     private static EmployeeDirector INSTANCE;

@@ -1,7 +1,7 @@
-package org.example.models;
+package org.example.entety;
 
-import org.example.models.observer.Observers;
-import org.example.models.observer.ProjectObserver;
+import org.example.patterns.observer.Observers;
+import org.example.patterns.observer.ProjectObserver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,4 +50,12 @@ public class Project implements ProjectObserver {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Project{" +
+                "tasks=" + tasks +
+                ", name='" + name + '\'' +
+                ", list=" + list +
+                '}';
+    }
 }
