@@ -1,4 +1,4 @@
-package org.example.models;
+package org.example.entety;
 
 public class Human {
     private String name;

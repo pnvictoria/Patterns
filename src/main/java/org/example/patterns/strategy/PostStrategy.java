@@ -1,4 +1,4 @@
-package org.example.models.strategy;
+package org.example.patterns.strategy;
 
 public interface PostStrategy {
     boolean isPossibleNewPosition();
