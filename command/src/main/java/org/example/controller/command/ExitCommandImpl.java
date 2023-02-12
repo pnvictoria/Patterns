@@ -1,6 +1,6 @@
-package org.example.contoller.comands;
+package org.example.controller.command;
 
-import org.example.patterns.command.Command;
+import org.example.controller.Command;
 
 public class ExitCommandImpl implements Command {
     @Override
@@ -8,4 +8,3 @@ public class ExitCommandImpl implements Command {
         System.exit(0);
     }
 }
-
