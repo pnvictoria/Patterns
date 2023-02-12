@@ -1,15 +1,22 @@
-package org.example.entety;
+package org.example.entity;
 
-public class Human {
+public class Worker {
     private String name;
     private String surname;
+    private int age;
 
-    public Human () {
+    public Worker() {
     }
 
-    public Human (String name, String surname) {
+    public Worker(String name, String surname) {
         this.name = name;
         this.surname = surname;
+    }
+
+    public Worker(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 
     public String getName() {
@@ -28,15 +35,24 @@ public class Human {
         this.surname = surname;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public void notifies() {
         System.out.println(name + " " + surname + " aware of the changes.");
     }
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "Worker{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
