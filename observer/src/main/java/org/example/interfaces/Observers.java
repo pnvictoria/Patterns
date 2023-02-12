@@ -1,4 +1,4 @@
-package org.example.patterns.observer;
+package org.example.interfaces;
 
 public interface Observers {
     void notifies();
